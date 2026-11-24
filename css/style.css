@@ -1,0 +1,151 @@
+@font-face {
+    font-family: 'JustMeAgainDownHere';
+    src: url('../fonts/JustMeAgainDownHere-Regular.woff2');
+}
+
+:root {
+    --global-max-width: 1200px;
+    --global-font-family: 'JustMeAgainDownHere';
+    --global-font-color: #000000;
+    --desktop-heading-1-font-size: 65px;
+    --desktop-heading-2-font-size: 45px;
+    --desktop-heading-3-font-size: 20px;
+    --desktop-nav-font-size: 40px;
+    --desktop-footer-size: 30px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.hauptnav {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    max-width: var(--global-max-width);
+    margin: 0 auto;
+    font-family: var(--global-font-family);
+    font-size: var(--desktop-nav-font-size);
+    padding: 30px 20px;
+}
+
+.hauptnav a {
+    text-decoration: none;
+    color: var(--global-font-color);
+}
+
+.hauptnav img {
+    justify-self: end;
+}
+
+.card-wrapper {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 115px));
+    gap: 20px;
+    justify-content: center;
+    justify-items: center;
+    width: 100%;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 60px;
+}
+
+main {
+    min-height: calc(100vh - 128px - 85px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--global-font-family);
+    width: 100%;
+    max-width: var(--global-max-width);
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1 {
+    font-family: var(--global-font-family);
+    padding: 20px;
+    font-size: var(--desktop-heading-1-font-size);
+}
+
+h2 {
+    font-family: var(--global-font-family);
+    padding: 20px;
+    font-size: var(--desktop-heading-2-font-size);
+}
+
+h3 {
+    font-family: var(--global-font-family);
+    padding: 20px;
+    font-size: var(--desktop-heading-3-font-size);
+    text-align: center;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 8px 30px;
+    width: 100%;
+    max-width: 900px;
+    font-family: var(--global-font-family);
+    font-size: 1.5rem;
+}
+
+form label {
+    align-self: center;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    width: 100%;
+    height: 55px;
+    padding: 0 15px;
+    border: none;
+    background-color: #E0E0E0;
+    font-family: var(--global-font-family);
+    font-size: 1.25rem;
+}
+
+form textarea {
+    height: 130px;
+    padding: 15px;
+    resize: none;
+}
+
+label[for="nachricht"] {
+    align-self: start;
+}
+
+label[for="agb"] {
+    margin-top: 40px;
+}
+
+form input[type="checkbox"] {
+    margin-top: 40px;
+    width: 30px;
+    height: 30px;
+    justify-self: start;
+}
+
+form input[type="submit"] {
+    grid-column: 2;
+    justify-self: start;
+    margin-top: 20px;
+    font-family: var(--global-font-family);
+    font-size: 1.25rem;
+}
+
+footer {
+    padding: 20px;
+    font-family: var(--global-font-family);
+    font-size: var(--desktop-footer-size);
+}
